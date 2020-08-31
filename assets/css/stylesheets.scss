@@ -1,0 +1,318 @@
+*,
+*::before,
+*::after {
+
+	box-sizing: border-box;
+
+}
+
+/* standard lineheight 1.5-1.6 */
+/*standard fontfamily Noto Sans JP*/
+body {
+
+	margin: 0;
+	padding: 0;
+	font-family: 'Noto Sans JP', sans-serif;
+	line-height: 1.6;
+
+}
+/*standard image max-width and display*/
+img {
+
+	max-width: 100%;
+	display: block;
+}
+
+/*standard text margins*/
+h1,
+h2,
+h3,
+p {
+
+	margin: 0;
+
+}
+
+.mid {
+
+	font-size: 40px;
+	color: white;
+	text-shadow: 0 0 15px rgba(0, 0, 0, .25);
+	text-align: center;
+	padding: 280px 0;
+	background: 
+	url('../../products/bests.png'), 
+	radial-gradient(white, white, rgba(0, 0, 0, .5));
+	background-blend-mode: multiply;
+	background-position: center center;
+	background-size: cover;
+
+}
+
+
+
+/* where flex is used */
+.split {
+
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+
+} .split > * {
+
+	flex-basis: 300px;
+	min-width: 8em;
+	margin: 0 auto;
+}
+
+
+section {
+
+	padding: 7em 0;
+
+} .container {
+
+	width: 85%;
+	max-width: 65em;
+	margin: 0 auto;
+
+} .spacing > * + * {
+
+	margin-top: 2rem;
+}
+
+
+.btn {
+
+	display: inline-block;
+	text-decoration: none;
+	padding: .5em 1.25em;
+	background: blue;
+	color: #fff;
+	font-weight: 700;
+	font-size: 1.125em;
+	border-radius: .25em;
+	text-transform: uppercase;
+	transition: 250ms ease-in-out,
+	opacity 250ms linear;
+
+} .btn:hover,
+  .btn:focus {
+
+	transform: scale(1.1);
+	opacity: .9;
+}
+
+
+.primary-title {
+
+	font-size: 4em;
+	line-height: 1.1;
+	text-transform: uppercase;
+
+} .section-title {
+
+	text-align: center;
+	font-size: 2.5rem;
+	line-height: 1;
+	color: #17353d;
+	margin-bottom: 5rem;
+}
+
+
+
+/* 15em padding makes text vertically centered*/
+.hero {
+
+	color: white;
+	text-align: center;
+	padding: 15em 0;
+	background: 
+	url('../../products/44.jpg'),
+	radial-gradient(#444, #111);
+	background-blend-mode: multiply;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-position: center center;
+	
+
+}
+
+
+.featured {
+
+	background: white;
+
+}
+
+.featured__item {
+
+	display: block;
+	position: relative;
+	transform: scale(.85);
+	transition: all 250ms ease-in-out;
+	text-decoration: none;
+	text-align: center;
+	color: black;
+
+}
+
+span {
+
+	display: block;
+	font-weight: 700;
+	font-size: 2.5rem;
+
+}
+
+
+.featured__item:hover,
+.featured__item:focus {
+
+	transform: scale(1);
+}
+
+
+.featured__item:hover .featured__details, .featured__item:focus .featured__details {
+
+	opacity: 1;
+}
+
+/* 100% width of the parent */
+.featured__item::after {
+
+	content: '';
+	position: absolute;
+	top: 20%;
+	left: 22%;
+	padding: 40% 40% 0 0;
+	background: #fff;
+	border-radius: 50%;
+	z-index: -1;
+
+}
+
+.featured__details {
+
+	opacity: 0;
+	text-shadow: 0 0 10px rgba(0, 0, 0, .25);
+	transition: opacity 250ms linear;
+
+}
+
+
+.product {
+
+	background: radial-gradient(limegreen, yellow);
+	border-radius: 20px;
+	margin-bottom: 50px;
+	padding: 2.5rem;
+	text-align: center;
+
+} .product__img {
+
+	margin: -5em 0 0;
+} .product__title {
+
+	margin: 0;
+} .product__description {
+
+	text-align: justify;
+
+}
+
+
+
+
+@media screen and (min-width: 720px) {
+
+// general style
+	.product {
+
+		text-align: left;
+		margin-bottom: 9em;
+	} .product__img {
+
+		width: 50%;
+		float: right;
+		shape-outside: url('../../products/bests.png');
+		margin: 0 -5em 0 0;
+		shape-margin: 1em;
+
+	} .product__description {
+
+		text-align: justify-all;
+	}
+
+// custom style
+	.shoe-2 {
+
+		text-align: right;
+
+	} .shoe-2 .product__img{
+
+		float: left;
+		margin: 0 0 0 -5em;
+	}
+
+	.shoe-4 .product__img {
+		float: left;
+		transform: rotateY(180deg);
+		shape-outside: url('../../products/nice.png');
+		shape-margin: 4em;
+		margin: 0 0 0 -5em;
+	}
+
+
+}
+
+.product__title {
+
+	font-size: 3rem;
+	text-transform: uppercase;
+	line-height: 1.1;
+	color: #fff;
+	text-shadow: 0 0 10px rgba(0, 0, 0, .25);
+}
+
+.shoe-1 {
+
+	background: radial-gradient(#faa700, #e48d00);
+
+} .shoe-1 .btn {
+
+	background: #a1173c;
+}
+
+
+.shoe-2 {
+
+	background: radial-gradient(#fce4b3, #eac886);
+
+} .shoe-2 .btn {
+
+	background: #2f4848;
+}
+
+
+.shoe-3 {
+
+	background: radial-gradient(#6dd5ed, #2193b0);
+
+} .shoe-3 .btn {
+
+	background: #008951;
+}
+
+
+.shoe-4 {
+
+	background: radial-gradient(#FFCA33, #fff);
+}.shoe-4 .btn {
+
+	background: #FF4933;
+}
+
+
+
+
